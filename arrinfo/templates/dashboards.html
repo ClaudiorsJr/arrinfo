@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}Relatórios{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <h1 class="fade-in" style="animation-delay: 0.3s;">Dashboards da Área</h1>
+        
+        <div class="dashboard-container">
+            <!-- Container Operacional -->
+            <div class="category-container fade-in" style="animation-delay: 0.1s;">
+                <h2 class="category-title">Operacional</h2>
+                
+                <div class="subcategory">
+                    <div class="subcategory-header" onclick="toggleSubcategory('operacional-conciliacao-bancos')">
+                        <h3>Conciliação de Bancos</h3>
+                        <span class="toggle-icon" id="operacional-conciliacao-bancos-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="operacional-conciliacao-bancos-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Concilia%C3%A7%C3%A3o%20de%20Bancos%20-%20EQTL%20MAPAPIAL?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                MAPAPIALAP</a>
+                            <span class="dashboard-description">Conciliação diária de bancos Equatorial MA, PA, PI, AL e AP</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Concilia%C3%A7%C3%A3o%20de%20Bancos%20-%20EQTL%20GO?rs:Command=Render&rc:Toolbar=false" target ="_blank">
+                                GO (Em validação)</a>
+                            <span class="dashboard-description">Conciliação diária de bancos Equatorial GO</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Conciliacao%20de%20Cart%C3%A3o%20-%20EQTL%20RS?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                RS</a>
+                            <span class="dashboard-description">Conciliação diária de bancos Equatorial RS</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="subcategory">
+                    <div class="subcategory-header" onclick="toggleSubcategory('operacional-conciliacao-cartoes')">
+                        <h3>Conciliação de Cartões</h3>
+                        <span class="toggle-icon" id="operacional-conciliacao-cartoes-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="operacional-conciliacao-cartoes-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Conciliacao%20de%20Cart%C3%A3o%20-%20EQTL%20MAPAPIALAP?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                MAPAPIALAP</a>
+                            <span class="dashboard-description">Conciliação diária de cartão Equatorial MA, PA, PI, AL e AP</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Conciliacao%20de%20Cart%C3%A3o%20-%20EQTL%20GO?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                GO</a>
+                            <span class="dashboard-description">Conciliação diária de cartão Equatorial GO</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Conciliacao%20de%20Cart%C3%A3o%20-%20EQTL%20RS?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                RS</a>
+                            <span class="dashboard-description">Conciliação diária de cartão Equatorial RS</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="subcategory">
+                    <div class="subcategory-header" role="button" tabindex="0" onclick="toggleSubcategory('operacional-monitoramento')">
+                        <h3>Processamento de Arquivos</h3>
+                        <span class="toggle-icon" id="operacional-monitoramento-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="operacional-monitoramento-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Painel%20de%20processamento%20de%20arquivos%20-%20EQTL%20MA?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                MA</a>
+                            <span class="dashboard-description">Processamento de Arquivos Bancários Equatorial MA</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Painel%20de%20processamento%20de%20arquivos%20-%20EQTL%20PA?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                PA</a>
+                            <span class="dashboard-description">Processamento de Arquivos Bancários Equatorial PA</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Painel%20de%20processamento%20de%20arquivos%20-%20EQTL%20PI?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                PI</a>
+                            <span class="dashboard-description">Processamento de Arquivos Bancários Equatorial PI</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Painel%20de%20processamento%20de%20arquivos%20-%20EQTL%20AL?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                AL</a>
+                            <span class="dashboard-description">Processamento de Arquivos Bancários Equatorial AL</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/1%20-%20OPERACIONAL/Painel%20de%20processamento%20de%20arquivos%20-%20EQTL%20AP?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                AP</a>
+                            <span class="dashboard-description">Processamento de Arquivos Bancários Equatorial AP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Container Estratégico -->
+            <div class="category-container fade-in" style="animation-delay: 0.1s;">
+                <h2 class="category-title">Estratégico</h2>
+                
+                <div class="subcategory">
+                    <div class="subcategory-header" role="button" tabindex="0" onclick="toggleSubcategory('estrategico-indicadores')">
+                        <h3>Indicadores de Desempenho</h3>
+                        <span class="toggle-icon" id="estrategico-indicadores-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="estrategico-indicadores-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/2%20-%20ESTRATEGICO/9%20EQUATORIAL/INDICADOR%20PIX?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Participação do PIX na Arrecadação</a>
+                            <span class="dashboard-description">Índice de participação do PIX na arrecadação</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/2%20-%20ESTRATEGICO/9%20EQUATORIAL/INDICADOR%20REC?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Reclamações de Arrecadação</a>
+                            <span class="dashboard-description">Índice de reclamações de arrecadação</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/2%20-%20ESTRATEGICO/9%20EQUATORIAL/INDICADOR%20NT?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Conciliação de Contas Contábeis</a>
+                            <span class="dashboard-description">Índice de conciliação de NT</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/2%20-%20ESTRATEGICO/9%20EQUATORIAL/INDICADOR%20GG?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Gastos Gerenciáveis</a>
+                            <span class="dashboard-description">Indicador de gastos gerenciáveis</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <div class="subcategory-header" role="button" tabindex="0" onclick="toggleSubcategory('estrategico-outros')">
+                        <h3>Outros Relatórios</h3>
+                        <span class="toggle-icon" id="estrategico-outros-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="estrategico-outros-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/2%20-%20ESTRATEGICO/Gest%C3%A3o%20de%20Projetos%20de%20Arrecada%C3%A7%C3%A3o?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Projetos de Arrecadação</a>
+                            <span class="dashboard-description">Relatório com o andamento dos projetos de arrecadação</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Container Gerencial -->
+            <div class="category-container fade-in" style="animation-delay: 0.1s;">
+                <h2 class="category-title">Gerencial</h2>
+                
+                <div class="subcategory">
+                    <div class="subcategory-header" role="button" tabindex="0" onclick="toggleSubcategory('gerencial-relatorios')">
+                        <h3>Relatórios Gerenciais</h3>
+                        <span class="toggle-icon" id="gerencial-relatorios-icon">+</span>
+                    </div>
+                    <ul class="dashboard-list" id="gerencial-relatorios-list">
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/3%20-%20GERENCIAL/Ritmo%20de%20Arrecadacao?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Ritmo da Arrecadação</a>
+                            <span class="dashboard-description">Relatório do ritmo da arrecadação</span>
+                        </li>
+                        <li class="fade-in" style="animation-delay: 0.1s;">
+                            <a href="http://bi.equatorialenergia.com.br/reports/powerbi/CORP-COBRANCA/ARRECADA%C3%87%C3%83O/3%20-%20GERENCIAL/Report%20Arrecadacao?rs:Command=Render&rc:Toolbar=false" target="_blank">
+                                Report de Arrecadação</a>
+                            <span class="dashboard-description">Relatório resumido de arrecadação</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleSubcategory(subcategoryId) {
+    const list = document.getElementById(`${subcategoryId}-list`);
+    const icon = document.getElementById(`${subcategoryId}-icon`);
+    
+    if (list.style.display === 'none' || !list.style.display) {
+        list.style.display = 'block';
+        icon.textContent = '-';
+    } else {
+        list.style.display = 'none';
+        icon.textContent = '+';
+    }
+}
+
+// Inicializa com todas as subcategorias fechadas
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dashboard-list').forEach(list => {
+        list.style.display = 'none';
+    });
+});
+</script>
+{% endblock %}
