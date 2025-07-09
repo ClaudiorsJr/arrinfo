@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>  
+    
+    <!-- Botão toggle primeiro -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
     <div class="sidebar">
         <div class="logo">
             <img src="{{ url_for('static', filename='img/logo-equatorial.png') }}" alt="Equatorial Energia" class="logo-image">
@@ -17,7 +23,6 @@
                 <li>
                     <a href="{{ url_for('index') }}" 
                        class="nav-link {% if request.path == url_for('index') %}active{% endif %}">
-                       <!---Ícone de home do site https://fontawesome.com/-->
                        <i class="fa-solid fa-house"></i>
                        <span>Início</span>
                     </a>
@@ -25,7 +30,6 @@
                 <li>
                     <a href="{{ url_for('dashboards') }}" 
                        class="nav-link {% if request.path == url_for('dashboards') %}active{% endif %}">
-                       <!---Ícone de dashboard do site https://fontawesome.com/-->
                        <i class="fa-solid fa-chart-line"></i>
                        <span>Relatórios</span>
                     </a>
@@ -33,9 +37,12 @@
             </ul>
         </nav>
     </div>
+
+    <!-- Overlay (somente para mobile) -->
+    <div class="sidebar-overlay"></div>
+
     <div class="main-content fade-in">
         {% block content %}{% endblock %}
-        <!-- 🔻 Rodapé -->
         <footer class="footer fade-in">
             <p>© {{ current_year if current_year else "2025" }} Área Executiva de Gestão e Operação da Arrecadação - Todos os direitos reservados.</p>
         </footer>
