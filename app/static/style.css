@@ -8,6 +8,7 @@
 
 /* === Layout Geral === */
 body {
+    /* === Seu layout original === */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -182,7 +183,7 @@ nav ul li a:hover {
 /* === Seções do Conteúdo === */
 .welcome-box {
     background-color: var(--white);
-    padding: 20px;
+    padding: 12px;
     border-radius: 8px;
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -211,6 +212,7 @@ nav ul li a:hover {
     margin-bottom: 15px;
     font-family:sans-serif;
     font-weight: 300;
+    font-style: italic;
 }
 
 .welcome-box h3 {
@@ -247,7 +249,7 @@ nav ul li a:hover {
 /* === Cards de Links === */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -259,6 +261,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid var(--navy-blue);
+    text-align: center;
 }
 
 .link-card:hover {
@@ -275,7 +278,7 @@ nav ul li a:hover {
 .link-card p {
     color: var(--dark-gray);
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .card-button {
@@ -459,7 +462,7 @@ nav ul li a:hover {
     position: relative;
     display: flex;
     max-width: 1200px;
-    height: auto;
+    height: 300px;
     margin: 2rem auto;
     overflow: hidden;
     border-radius: 8px;
