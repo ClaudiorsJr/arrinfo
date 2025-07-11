@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Arr - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>  
+    
+    <!-- Botão toggle primeiro -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo-equatorial.png') }}" alt="Equatorial Energia" class="logo-image">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('index') }}" 
+                       class="nav-link {% if request.path == url_for('index') %}active{% endif %}">
+                       <i class="fa-solid fa-house"></i>
+                       <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('dashboards') }}" 
+                       class="nav-link {% if request.path == url_for('dashboards') %}active{% endif %}">
+                       <i class="fa-solid fa-chart-line"></i>
+                       <span>Relatórios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://grupoequatorialenergia.sharepoint.com/sites/ArrecadaoCorporativaEQTL/SitePages/PORTAL-ARRECADACAO-EQTL.aspx" 
+                    class="nav-link {% if 'https://grupoequatorialenergia.sharepoint.com/sites/ArrecadaoCorporativaEQTL/SitePages/PORTAL-ARRECADACAO-EQTL.aspx' in request.url %}active{% endif %}" 
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Portal de Indicadores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://10.6.10.80:4001/" 
+                    class="nav-link {% if 'http://10.6.10.80:4001/' in request.url %}active{% endif %}" 
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Cadastro de POS</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay (somente para mobile) -->
+    <div class="sidebar-overlay"></div>
+
+    <div class="main-content fade-in">
+        {% block content %}{% endblock %}
+        <footer class="footer fade-in">
+            <p>© {{ current_year if current_year else "2025" }} Área Executiva de Gestão e Operação da Arrecadação - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

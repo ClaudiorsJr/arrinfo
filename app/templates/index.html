@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+    
+    <!--Container de boas vindas-->
+    <div class="welcome-box fade-in">
+        <h1>Área Corporativa de Gestão e Operação da Arrecadação</h1>
+        <h2> Portal de informações da área de Arrecadação do grupo Equatorial Energia</h2>
+    </div>
+
+     <!-- Banners -->
+    <div class="banner-container fade-in" style="animation-delay: 0.3s;">
+        <div class="banner-slide active">
+            <img src="/static/img/banner-em-construcao.png" alt="Banner 1">
+        </div>
+        <!--<div class="banner-slide">
+            <img src="/static/img/BG.jpg" alt="Banner 2">
+        </div> -->
+       
+        <!-- Botões opcionais -->
+        <button class="banner-prev">❮</button>
+        <button class="banner-next">❯</button>
+    </div>
+    
+    <div class="links-section fade-in" style="animation-delay: 0.5s;">
+        <h2>Links Importantes</h2>
+        <div class="cards-container">
+
+            <!-- Card: Actio -->
+            <a href="https://equatorialenergia.actiosoftware.app/rv/painel/cardmeta" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>Actio</h3>
+                    <p>Acompanhamento do card de metas da equipe</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+
+            <!-- Card: POPs (link vazio "#" mantido) -->
+            <a href="#" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>Procedimentos Operacionais Padrão (POPs)</h3>
+                    <p>Documentação de processos</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+
+            <!-- Card: Organograma (link vazio "#" mantido) -->
+            <a href="#" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>Organograma da área</h3>
+                    <p>Conheça nossa equipe</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+
+            <!-- Card: DocuSign -->
+            <a href="https://account.docusign.com/#/username" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>DocuSign</h3>
+                    <p>Assinatura de documentos</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+
+            <!-- Card: Portal do Colaborador -->
+            <a href="http://portaldocolaborador.equatorial.corp" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>Portal do Colaborador</h3>
+                    <p>Controle de ponto e contracheque</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+
+            <!-- Card: Portal de Serviços -->
+            <a href="https://portaldeservicos.equatorialenergia.com.br/equatorial" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-card fade-in" 
+                style="animation-delay: 0.6s; display: block; text-decoration: none; color: inherit;">
+                    <h3>Portal de Serviços Equatorial</h3>
+                    <p>Abertura de chamados</p>
+                    <span class="card-button">Acessar</span>
+            </a>
+        </div> <!-- Fecha div.cards-container -->
+    </div> <!-- Fecha div.links-section -->
+{% endblock %}
