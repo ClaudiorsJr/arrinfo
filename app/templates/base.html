@@ -16,7 +16,7 @@
 
     <div class="sidebar">
         <div class="logo">
-            <img src="{{ url_for('static', filename='img/logo-equatorial.png') }}" alt="Equatorial Energia" class="logo-image">
+            <img src="{{ url_for('static', filename='img/home/logo-equatorial.png') }}" alt="Equatorial Energia" class="logo-image">
         </div>
         <nav>
             <ul>
@@ -50,6 +50,20 @@
                     rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt"></i>
                     <span>Cadastro de POS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('about') }}" 
+                       class="nav-link {% if request.path == url_for('about') %}active{% endif %}">
+                       <i class="fa-solid fa-people-group" style="color: #ffffff;"></i>
+                       <span>Sobre nós</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('about_v2') }}" 
+                       class="nav-link {% if request.path == url_for('about_v2') %}active{% endif %}">
+                       <i class="fa-solid fa-people-group" style="color: #ffffff;"></i>
+                       <span>Sobre</span>
                     </a>
                 </li>
             </ul>

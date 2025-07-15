@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre Nós - Equatorial{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <!-- Cabeçalho -->
+    <header class="about-header fade-in">
+        <h1>Sobre Nossa Equipe</h1>
+        <p class="subtitle">Gestão e Operação de Arrecadação</p>
+    </header>
+
+    <!-- Seção de Dados -->
+    <section class="stats-section fade-in" style="animation-delay: 0.7s;">
+        <h2>Arrecadação em Números</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Empresas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Sistemas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">81</div>
+                <div class="stat-label">Processos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Subáreas</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Organograma -->
+    <section class="org-chart-section fade-in" style="animation-delay: 0.3s;">
+        <div class="section-header">
+            <h2>Nosso Organograma</h2>
+            <p>Conheça a estrutura da nossa área</p>
+        </div>
+        
+        <!-- Espaço para banners (substitua pelas suas imagens) -->
+        <div class="org-chart-grid">
+            <div class="chart-container">
+                <img src="{{ url_for('static', filename='img/sobre/organograma-geral.png') }}" alt="Organograma Geral" class="chart-img">
+                <div class="chart-caption">Visão Geral</div>
+            </div>
+            <div class="chart-container">
+                <img src="{{ url_for('static', filename='img/sobre/organograma-detalhado.png') }}" alt="Organograma Detalhado" class="chart-img">
+                <div class="chart-caption">Estrutura Detalhada</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Processo -->
+    <section class="process-section fade-in" style="animation-delay: 0.5s;">
+        <div class="section-header">
+            <h2>Nosso Processo</h2>
+            <p>Como operamos com excelência</p>
+        </div>
+        
+        <div class="process-grid">
+            
+            <div class="process-card">
+                <div class="process-icon"></div>
+                <h3>Ciclo Operacional</h3>
+                <ol class="process-steps">
+                    <li>Disponibilização de Meios de Pagamento</li>
+                    <li>Monitoramento de Arquivos</li>
+                    <li>Processos de Pagamento e Baixa</li>
+                    <li>Conciliação Comercial, Financeira e Contábil</li>
+                    <li>Gestão do Numerário em Tânsito</li>
+                    <li>Clarificação</li>
+                    <li>Auditorias</li>
+                    <li>Reclamações via ouvidoria, processos judiciais e solicitações de outros setores</li>
+                </ol>
+            </div>
+            
+            <div class="process-card">
+                <div class="process-icon"></div>
+                <h3>Subáreas</h3>
+                <ul class="process-sublist">
+                    <li>Operação</li>
+                    <li>Informação</li>
+                    <li>Planejamento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
