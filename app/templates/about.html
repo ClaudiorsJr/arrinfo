@@ -1,37 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Sobre Nós - Equatorial{% endblock %}
+{% block title %}Equipe{% endblock %}
 
 {% block content %}
-<div class="about-container">
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nossa Equipe - Equatorial</title>
+</head>
+<body>
+    <div class="about-container">
     <!-- Cabeçalho -->
     <header class="about-header fade-in">
         <h1>Sobre Nossa Equipe</h1>
-        <p class="subtitle">Gestão e Operação de Arrecadação</p>
+        <p class="subtitle">A Área Executiva de <b>Gestão e Operação da Arrecadação</b> é reponsável 
+            por coordenar a arrecadação de <b>8 empresas</b>, operando através de <b>4 sistemas comerciais</b>.
+            Nossa arrecadação é estruturada em três subáreas: <b>Operação, Planejamento e Informação</b>.
+            São <b>81 processos</b> essenciais para garantir <b>eficiência e controle</b>.
+        </p>
     </header>
-
-    <!-- Seção de Dados -->
-    <section class="stats-section fade-in" style="animation-delay: 0.7s;">
-        <h2>Arrecadação em Números</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">8</div>
-                <div class="stat-label">Empresas</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Sistemas</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">81</div>
-                <div class="stat-label">Processos</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Subáreas</div>
-            </div>
-        </div>
-    </section>
 
     <!-- Seção do Organograma -->
     <section class="org-chart-section fade-in" style="animation-delay: 0.3s;">
@@ -40,54 +30,258 @@
             <p>Conheça a estrutura da nossa área</p>
         </div>
         
-        <!-- Espaço para banners (substitua pelas suas imagens) -->
+        <!-- Banners -->
         <div class="org-chart-grid">
             <div class="chart-container">
-                <img src="{{ url_for('static', filename='img/sobre/organograma-geral.png') }}" alt="Organograma Geral" class="chart-img">
-                <div class="chart-caption">Visão Geral</div>
-            </div>
-            <div class="chart-container">
-                <img src="{{ url_for('static', filename='img/sobre/organograma-detalhado.png') }}" alt="Organograma Detalhado" class="chart-img">
-                <div class="chart-caption">Estrutura Detalhada</div>
+                <img src="{{ url_for('static', filename='img/sobre/organograma-detalhado.png') }}" 
+                alt="Organograma Detalhado" 
+                class="chart-img"
+                loading="lazy">
+                <!--div class="chart-caption">Estrutura Detalhada</div-->
             </div>
         </div>
     </section>
-
-    <!-- Seção do Processo -->
-    <section class="process-section fade-in" style="animation-delay: 0.5s;">
-        <div class="section-header">
-            <h2>Nosso Processo</h2>
-            <p>Como operamos com excelência</p>
-        </div>
+    
+    <div class="org-chart-section fade-in" style="animation-delay: 0.3s;">
+        <header class="section-header">
+            <h2>Operação</h2>
+            <p>Processos da subárea de operação</p>
+        </header>
         
-        <div class="process-grid">
-            
-            <div class="process-card">
-                <div class="process-icon"></div>
-                <h3>Ciclo Operacional</h3>
-                <ol class="process-steps">
-                    <li>Disponibilização de Meios de Pagamento</li>
-                    <li>Monitoramento de Arquivos</li>
-                    <li>Processos de Pagamento e Baixa</li>
-                    <li>Conciliação Comercial, Financeira e Contábil</li>
-                    <li>Gestão do Numerário em Tânsito</li>
-                    <li>Clarificação</li>
-                    <li>Auditorias</li>
-                    <li>Reclamações via ouvidoria, processos judiciais e solicitações de outros setores</li>
-                </ol>
+        <div class="compact-process-grid">
+                       
+            <!-- Card 1 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/monitoramento.jpg')}}" 
+                     alt="Monitoramento" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Monitoramento de Arquivos</h3>
+                    <ul class="compact-process-steps">
+                        <li>Recebimento e processamento de arquivos bancários</li>
+                        <li>Ordens e registros de boletos</li>
+                        <li>Migração de Clientes C para B</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver métricas →</a> -->
+                </div>
             </div>
             
-            <div class="process-card">
-                <div class="process-icon"></div>
-                <h3>Subáreas</h3>
-                <ul class="process-sublist">
-                    <li>Operação</li>
-                    <li>Informação</li>
-                    <li>Planejamento</li>
-                </ul>
+            <!-- Card 2 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/conciliacao-comercial.jpg')}}"
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Conciliação Comercial e Financeira</h3>
+                    <ul class="compact-process-steps">
+                        <li>Conciliação bancária e cartão </li>
+                        <li>Baixas manuais</li>
+                        <li>Fechamento comercial</li>
+                        <li>Tratamento Chargeback</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
             </div>
-        </div>
-    </section>
 
-</div>
+            <!-- Card 3 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/clarificacao.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Clarificação</h3>
+                    <ul class="compact-process-steps">
+                        <li>Entrantes x Tratados</li>
+                        <li>Suporte à parceira</li>
+                        <li>Apuração mensal de casos em clarificação</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+                <!-- Card 4 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/reclamacao.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Reclamações</h3>
+                    <ul class="compact-process-steps">
+                        <li>Acompanhamento da rotina de tratamento</li>
+                        <li>Devolução de crédito</li>
+                        <li>Gestão das procedências e improcedências</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+
+                <!-- Card 5 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/conciliacao-contabil.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Conciliação Contábil</h3>
+                    <ul class="compact-process-steps">
+                        <li>Conciliação das contas de NT e RT</li>
+                        <li>Tratamento de passivo</li>
+                        <li>Fechamento do numerário</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/auditoria.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Auditoria</h3>
+                    <ul class="compact-process-steps">
+                        <li>Gestão de solicitações</li>
+                        <li>Coleta de evidências</li>
+                        <li>Atendimento de itens de controle internos</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+            
+        </div>
+
+    <div class="org-chart-section fade-in" style="animation-delay: 0.3s;"></div>
+        <header class="section-header">
+            <h2>Planejamento e Projetos</h2>
+            <p>Processos da subárea de planejamento</p>
+        </header>
+        
+        <div class="compact-process-grid">
+                       
+            <!-- Card 1 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/contrato.jpg')}}" 
+                     alt="Orçamento" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Orçamento e contratos</h3>
+                    <ul class="compact-process-steps">
+                        <li>Orçamento pacote 16</li>
+                        <li>Gestão da tarifa</li>
+                        <li>Gestão de contratos</li>
+                        <li>Acompanhamento IPCA/IGPM</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver métricas →</a> -->
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/qualidade.jpg')}}"
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Qualidade</h3>
+                    <ul class="compact-process-steps">
+                        <li>Fluxos de processo, planos e procedimentos</li>
+                        <li>Melhoria contínua</li>
+                        <li>Gestão e Operação do Cartão</li>
+                        <li>Gestão de Indicadores</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/planejamento-estrategico.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Planejamento Estratégico</h3>
+                    <ul class="compact-process-steps">
+                        <li>Gestão de Projetos</li>
+                        <li>Melhorias meios de pagamento</li>
+                        <li>Novas tecnologias</li>
+                        <li>Campanhas de incentivo</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+                            
+        </div>
+
+    <div class="org-chart-section fade-in" style="animation-delay: 0.3s;"></div>
+        <header class="section-header">
+            <h2>Informação</h2>
+            <p>Processos da subárea de informação</p>
+        </header>
+        
+        <div class="compact-process-grid">
+                       
+            <!-- Card 1 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/informacao-desenvolvimento.jpg')}}" 
+                     alt="Orçamento" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Desenvolvimento</h3>
+                    <ul class="compact-process-steps">
+                        <li>Desenvolvimento de dashboards</li>
+                        <li>Criação de tabelas (ORACLE DB e Snowflake)</li>
+                        <li>Monitoramento da Carga de Dados</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver métricas →</a> -->
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/informacao-analise.jpg')}}"
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Análise de dados</h3>
+                    <ul class="compact-process-steps">
+                        <li>Análise preditiva</li>
+                        <li>Inteligência de mercado</li>
+                        <li>Estudos de caso</li>
+                        <li>Geração e análise de dados</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="compact-process-card">
+                <img src="{{url_for('static', filename = 'img/sobre/informacao-automatizacao.jpg')}}" 
+                     alt="Processos" 
+                     class="compact-card-image"
+                     loading="lazy">
+                <div class="compact-card-content">
+                    <h3>Governança e automação</h3>
+                    <ul class="compact-process-steps">
+                        <li>Automatização de processos</li>
+                        <li>Extração de arquivos bancários</li>
+                        <li>Governança de acesso</li>
+                        <li>Controle do Parque de POS</li>
+                    </ul>
+                    <!--<a href="#" class="compact-see-more">Ver fluxo →</a>-->
+                </div>
+            </div>
+                            
+        </div>
+    </div>
+</body>
+</html>
+
 {% endblock %}

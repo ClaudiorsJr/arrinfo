@@ -10,12 +10,9 @@ def index():
 def dashboards():
     return render_template('dashboards.html')
 
-@app.route('/sobre')
+@app.route('/equipe')
 def about():
     return render_template('about.html')
-@app.route('/sobre_v2')
-def about_v2():
-    return render_template('about_v2.html')
 
 @app.route('/estrategico')
 def estrategico():
